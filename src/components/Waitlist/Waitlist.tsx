@@ -1,7 +1,9 @@
 import type { FormEvent } from 'react'
+import { useState } from 'react'
 import styles from './Waitlist.module.css'
 import { useMutation } from '@tanstack/react-query'
 import { createUser } from '../../queries/users/users'
+import { toast } from 'react-toastify'
 
 
 
@@ -9,18 +11,38 @@ const Waitlist = () => {
     const createUserMutation = useMutation({
         mutationFn: createUser,
         onSuccess: () => {
-            console.log("User successfully added to waitlist")
+            console.log("dfgdgdfgdfgfdgdfgdfg")
+            toast.success('User successfully added to waitlist')
         },
-        onError: (error) => {
-            console.error("Error adding user to waitlist:", error)
-        }
+        onError: (error: any) => {
+                const status = error.status
+                const message = error?.response?.data?.message ?? error?.message ?? String(error)
+
+                if (status === 409) {
+                    toast.info('You are already on the waitlist.')
+                } else if (status === 500) {
+                    toast.error('Server error. Please try again later.')
+                } else {
+                    toast.error(`Error adding user: ${message}`)
+                }
+        },
     })
     
-    const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
+    const [submitting, setSubmitting] = useState(false)
+
+    const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
         const formData = new FormData(event.currentTarget)
         const email = formData.get('email')
-        createUserMutation.mutate(email as string)
+        if (!email) return
+
+        setSubmitting(true)
+        try {
+            await createUserMutation.mutateAsync(email as string)
+        } catch (e) {
+        } finally {
+            setSubmitting(false)
+        }
     }
 
     return (
@@ -44,11 +66,10 @@ const Waitlist = () => {
                     name="email"
                     type="email"
                     placeholder="you@company.com"
-                    required
-                />
-                <button className="btn btnPrimary" type="submit">
-                    Join waitlist
-                </button>
+                    required/>
+                    <button className="btn btnPrimary" type="submit" disabled={submitting}>
+                        {submitting ? 'Joining…' : 'Join waitlist'}
+                    </button>
                 </div>
                 <span className={styles.helper}>We’ll only send launch updates.</span>
             </form>

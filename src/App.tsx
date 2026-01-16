@@ -6,12 +6,26 @@ import Features from './components/Features/Features'
 import Waitlist from './components/Waitlist/Waitlist'
 import Footer from './components/Footer/Footer'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { Bounce, ToastContainer } from 'react-toastify'
 
 function App() {
 
   const queryClient = new QueryClient()
   return (
     <QueryClientProvider client={queryClient}>
+       <ToastContainer
+      position="bottom-center"
+      autoClose={5000}
+      hideProgressBar={false}
+      newestOnTop={false}
+      closeOnClick={false}
+      rtl={false}
+      pauseOnFocusLoss
+      draggable
+      pauseOnHover
+      theme="light"
+      transition={Bounce}
+    />
     <div className="page">
       <Header />
       <main>
@@ -23,7 +37,9 @@ function App() {
       </main>
       <Footer />
     </div>
+   
     </QueryClientProvider>
+    
   )
 }
 
