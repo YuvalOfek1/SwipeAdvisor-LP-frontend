@@ -1,0 +1,43 @@
+.metrics {
+  padding: 2.5rem 0 4.5rem;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  padding: 1.8rem;
+}
+
+.label {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.7rem;
+  color: rgba(231, 238, 252, 0.6);
+  margin-bottom: 0.6rem;
+}
+
+.value {
+  font-size: 1.35rem;
+  margin: 0 0 0.5rem;
+}
+
+.detail {
+  color: rgba(231, 238, 252, 0.7);
+  font-size: 0.95rem;
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}

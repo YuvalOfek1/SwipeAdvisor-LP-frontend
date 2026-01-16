@@ -1,0 +1,71 @@
+.waitlist {
+  padding: 4.5rem 0 5rem;
+}
+
+.container {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 28px;
+  padding: 2.5rem;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.title {
+  font-size: 2rem;
+  margin-top: 0;
+}
+
+.card p {
+  color: rgba(231, 238, 252, 0.75);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.label {
+  font-size: 0.9rem;
+  color: rgba(231, 238, 252, 0.8);
+}
+
+.inputRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.inputRow input {
+  flex: 1;
+  min-width: 220px;
+  padding: 0.85rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(5, 10, 20, 0.7);
+  color: #e7eefc;
+}
+
+.inputRow input::placeholder {
+  color: rgba(231, 238, 252, 0.45);
+}
+
+.helper {
+  font-size: 0.85rem;
+  color: rgba(231, 238, 252, 0.6);
+}
+
+@media (max-width: 900px) {
+  .card {
+    grid-template-columns: 1fr;
+  }
+}
