@@ -21,7 +21,7 @@ const Hero = () => {
           </div>
           <p className={styles.note}>Built for reliable, compliant, and fast decisions.</p>
         </div>
-        <div className={styles.card}>
+        {/* <div className={styles.card}>
           <h3 className={styles.cardTitle}>Real-time optimization</h3>
           <p>
             Swipe Advisor evaluates eligible cards instantly and recommends the best option for
@@ -31,8 +31,8 @@ const Hero = () => {
             <span>Checkout-ready</span>
             <span>Secure by design</span>
             <span>POS friendly</span>
-          </div> */}
-        </div>
+          </div>
+        </div> */}
       </div>
     </section>
   )
