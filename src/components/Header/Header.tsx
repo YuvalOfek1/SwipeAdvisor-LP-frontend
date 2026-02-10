@@ -4,10 +4,9 @@ const Header = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <div className={styles.brand}>
-          <span className={styles.dot} aria-hidden="true" />
-          <span>Swipe Advisor</span>
-        </div>
+        <a className={styles.brand} href="#top">
+          <img className={styles.logo} src="/SwipeAdvisor.jpg" alt="Swipe Advisor" />
+        </a>
         <nav className={styles.nav}>
           {/* <a href="#features">Features</a> */}
           <a href="#demo">Demo</a>

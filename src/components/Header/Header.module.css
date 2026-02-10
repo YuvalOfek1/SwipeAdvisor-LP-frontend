@@ -20,17 +20,14 @@
 .brand {
   display: flex;
   align-items: center;
-  gap: 0.6rem;
-  font-weight: 700;
-  letter-spacing: 0.3px;
+  text-decoration: none;
 }
 
-.dot {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #56ccf2, #2f80ed);
-  box-shadow: 0 0 12px rgba(86, 204, 242, 0.8);
+.logo {
+  height: 56px;
+  border-radius: 8px;
+  background: #fff;
+  padding: 5px;
 }
 
 .nav {
