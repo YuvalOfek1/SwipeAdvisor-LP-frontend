@@ -32,13 +32,15 @@ const Waitlist = () => {
 
     const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
         event.preventDefault()
-        const formData = new FormData(event.currentTarget)
+        const form = event.currentTarget
+        const formData = new FormData(form)
         const email = formData.get('email')
         if (!email) return
 
         setSubmitting(true)
         try {
             await createUserMutation.mutateAsync(email as string)
+            form.reset()
         } catch (e) {
         } finally {
             setSubmitting(false)

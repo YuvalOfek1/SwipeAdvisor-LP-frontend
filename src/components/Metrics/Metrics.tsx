@@ -16,7 +16,7 @@ const Metrics = () => {
         </div>
         <div className={styles.card}>
           <p className={styles.label}>Businesses supported</p>
-          <h3 className={styles.value}>450+</h3>
+          <h3 className={styles.value}>120+</h3>
           <p className={styles.detail}>Retail, hospitality, professional services, and more...</p>
         </div>
       </div>

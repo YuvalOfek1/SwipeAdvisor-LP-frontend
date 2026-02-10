@@ -8,7 +8,7 @@ const Hero = () => {
           <p className={styles.kicker}>Smart payments, better rewards</p>
           <h1 className={styles.title}>Swipe Advisor</h1>
           <p className={styles.subtitle}>
-            Smarter card choices at the moment you pay—personalized guidance that saves
+            Smarter card choices at the moment you pay-personalized guidance that saves
             businesses money in seconds.
           </p>
           <div className={styles.actions}>

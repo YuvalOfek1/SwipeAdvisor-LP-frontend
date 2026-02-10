@@ -21,9 +21,49 @@
   color: rgba(231, 238, 252, 0.75);
 }
 
-.player {
-  width: 100%;
+.preview {
+  position: relative;
   border-radius: 24px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  display: block;
+  border-radius: 24px;
+  pointer-events: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: rgba(231, 238, 252, 0.85);
+  background: rgba(0, 0, 0, 0.35);
+  transition: background 0.2s;
+}
+
+.preview:hover .overlay {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+.play {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(86, 204, 242, 0.2);
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+  color: #bfe9ff;
+  box-shadow: 0 10px 24px rgba(47, 128, 237, 0.35);
 }
 
 @media (max-width: 900px) {

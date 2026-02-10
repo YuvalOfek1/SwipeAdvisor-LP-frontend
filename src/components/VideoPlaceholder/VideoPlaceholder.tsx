@@ -11,14 +11,18 @@ const VideoPlaceholder = () => {
             recommendations, and the savings dashboard.
           </p>
         </div>
-        <video
-          className={styles.player}
-          controls
-          playsInline
-          preload="metadata"
-        >
-          <source src="/SwipeAdvisorStory.mp4" type="video/mp4" />
-        </video>
+        <a className={styles.preview} href="#demo">
+          <video
+            className={styles.thumbnail}
+            src="/SwipeAdvisorStory.mp4#t=20.0"
+            muted
+            playsInline
+            preload="metadata"
+          />
+          <div className={styles.overlay}>
+            <div className={styles.play} aria-hidden="true">▶</div>
+          </div>
+        </a>
       </div>
     </section>
   )

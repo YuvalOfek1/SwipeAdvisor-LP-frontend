@@ -53,6 +53,7 @@
   border: 1px solid rgba(255, 255, 255, 0.15);
   background: rgba(5, 10, 20, 0.7);
   color: #e7eefc;
+  font-size: 16px;
 }
 
 .inputRow input::placeholder {
