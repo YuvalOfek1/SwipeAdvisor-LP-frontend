@@ -9,7 +9,7 @@ const Hero = () => {
           <h1 className={styles.title}>Swipe Advisor</h1>
           <p className={styles.subtitle}>
             Smarter card choices at the moment you pay-personalized guidance that saves
-            businesses money in seconds.
+            you money in seconds.
           </p>
           <div className={styles.actions}>
             <a className="btn btnPrimary" href="#waitlist">
