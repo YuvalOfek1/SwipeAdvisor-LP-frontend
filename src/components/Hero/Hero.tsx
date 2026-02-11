@@ -8,7 +8,7 @@ const Hero = () => {
           <p className={styles.kicker}>Smart payments, better rewards</p>
           <h1 className={styles.title}>Swipe Advisor</h1>
           <p className={styles.subtitle}>
-            Tells you which credit card to use at every checkout — maximizing
+            Tells you which credit card to use at every checkout - maximizing
             cashback, discounts, and points based on your preferences.
           </p>
           <div className={styles.actions}>
